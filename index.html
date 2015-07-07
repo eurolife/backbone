@@ -40,6 +40,20 @@
 
     });
 
+    var todo = new app.Todo({title: 'Backbone app title', completed: false});
+    
+    app.TodoList = Backbone.Collection.extend({
+    	model: app.Todo,
+    	localstorage: new Store("backbone-todo")
+    });
+
+    // instance of the Collection
+    
+    app.todoList = new app.TodoList();
+
+
+
+    // tutorial is at: http://adrianmejia.com/blog/2012/09/13/backbone-js-for-absolute-beginners-getting-started-part-2/
 
   </script>
   
